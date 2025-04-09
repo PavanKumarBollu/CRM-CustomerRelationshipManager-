@@ -8,6 +8,8 @@
 </head>
 <body>
 	
-	<jsp:forward page="/customer/list"/>
+	<h1>Working</h1>
+	
+	<%-- <jsp:forward page="/customer/list"/> --%>
 </body>
 </html>
