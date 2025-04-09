@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<h1>Page loading soon....</h1>
 </body>
 </html>
