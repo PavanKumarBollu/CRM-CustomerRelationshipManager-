@@ -1,7 +1,10 @@
 package com.pavan.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 
-@Ent
+@Entity
+@Table(name = "customer")
 public class Customer {
 
 }
