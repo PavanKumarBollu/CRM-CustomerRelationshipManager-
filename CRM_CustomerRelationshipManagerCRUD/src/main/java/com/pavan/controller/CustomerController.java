@@ -21,8 +21,10 @@ public class CustomerController {
 	@GetMapping(value="/list")
 	public String listCustomers(Map<String,Object> model)
 	{
+		System.out.println("Implementation Class of Service Layer is ::" + service.getClass().getName());
 		List<Customer> allCustomer = service.getAllCustomer();
 		model.put("allCustomer", allCustomer);
+		allCustomer.forEach(System.out::println);
 		return "list-customers";
 	}
 }
