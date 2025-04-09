@@ -1,5 +1,9 @@
 package com.pavan.service;
 
-public interface ICustomerService {
+import java.util.List;
 
+import com.pavan.model.Customer;
+
+public interface ICustomerService {
+	public List<Customer> getAllCustomer();
 }
