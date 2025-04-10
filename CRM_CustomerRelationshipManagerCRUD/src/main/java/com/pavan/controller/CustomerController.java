@@ -49,12 +49,18 @@ public class CustomerController {
 		return "customer-form";
 	}
 	@PostMapping(value="/saveCustomer")
-	
 	public String saveCustomer(@ModelAttribute Customer customer)
 	{
 		service.saveCustomer(customer);
 		System.out.println(customer);
 		return "redirect:/customer/list";
+	}
+	@GetMapping(value="/showFormForUpdate")
+	public String showFromFroUpdate(@RequestParam Integer customerId, Map<String,Object> model)
+	{
+		Customer customer = service.getCustomerById(customerId);
+		model.put("customer", customer);
+		return "customer-form";
 	}
 	
 	
