@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.pavan.model.Customer;
 import com.pavan.service.ICustomerService;
@@ -29,4 +30,14 @@ public class CustomerController {
 		allCustomer.forEach(System.out::println);
 		return "list-customers";
 	}
+	
+	@GetMapping(value = "/showForm")
+	public String showFormAdd(Map<String, Object> model)
+	{
+		model.put("customer", new Customer());
+		return "customer-form";
+	}
+	
+	
+	
 }
