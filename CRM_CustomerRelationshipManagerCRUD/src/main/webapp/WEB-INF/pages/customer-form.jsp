@@ -20,6 +20,8 @@
 	<div id="container">
 		<h3>Save Customer</h3>
 		<c:form action="saveCustomer" method="Post" modelAttribute="customer">
+		<!-- Hidden Field for the updating purpose -->
+		<c:hidden path="id"/>
 			<table>
 				<tbody>
 					<tr>
