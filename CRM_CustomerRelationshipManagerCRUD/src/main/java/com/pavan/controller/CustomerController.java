@@ -67,7 +67,7 @@ public class CustomerController {
 	public String showFormForDelete(@RequestParam Integer customerId)
 	{
 		service.deleteCustomerById(customerId);
-		return "customer-form";
+		return "redirect:/customer/list";
 	}
 	
 	

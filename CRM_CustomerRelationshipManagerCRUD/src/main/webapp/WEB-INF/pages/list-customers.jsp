@@ -38,7 +38,7 @@
 						</c:url>
 						
 						<c:url var="deleteLink" value="/customer/showFormForDelete">
-							<c:param name="customerId" value=${customer.id}></c:param>
+							<c:param name="customerId" value="${customer.id}" />
 						</c:url>
 						<tr>
 							<td>${customer.firstName}</td>
