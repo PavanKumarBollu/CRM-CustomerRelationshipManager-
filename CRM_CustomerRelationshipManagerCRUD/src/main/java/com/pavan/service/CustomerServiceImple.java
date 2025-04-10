@@ -34,4 +34,9 @@ public class CustomerServiceImple implements ICustomerService {
 		return optional.get();
 	}
 
+	@Override
+	public void deleteCustomerById(Integer customerId) {
+		dao.deleteById(customerId);
+	}
+
 }

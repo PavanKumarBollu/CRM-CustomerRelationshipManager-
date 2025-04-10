@@ -66,6 +66,7 @@ public class CustomerController {
 	@GetMapping(value="/showFormForDelete")
 	public String showFormForDelete(@RequestParam Integer customerId)
 	{
+		service.deleteCustomerById(customerId);
 		return "customer-form";
 	}
 	
