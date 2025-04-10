@@ -26,7 +26,14 @@
 					<th>Email</th>
 					<th>Action</th>
 				<tr>
-				
+				<c:forEach items="${customers }" var="customer">
+					<tr>
+						<td>${customer.firstName}</td>
+						<td>${customer.lastName}</td>
+						<td>${customer.email}</td>
+					</tr>
+					
+				</c:forEach>
 				
 			
 			</table>
