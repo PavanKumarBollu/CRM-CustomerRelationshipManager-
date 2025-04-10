@@ -23,6 +23,7 @@ public class CustomerServiceImple implements ICustomerService {
 	@Override
 	public void saveCustomer(Customer customer) {
 		dao.save(customer);
+		
 	}
 
 }
