@@ -8,4 +8,5 @@ public interface ICustomerService {
 	public List<Customer> getAllCustomer();
 	public void saveCustomer(Customer customer);
 	public Customer getCustomerById(Integer customerId);
+	public void deleteCustomerById(Integer customerId);
 }
