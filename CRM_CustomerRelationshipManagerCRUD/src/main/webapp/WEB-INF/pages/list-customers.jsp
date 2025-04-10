@@ -8,8 +8,10 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" type="text/css"	href="${pageContext.request.contextPath}/css/style.css" />
-<link rel="stylesheet" type="text/css"	href="${pageContext.request.contextPath}/css/add-customer-style.css" />
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/css/style.css" />
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/css/add-customer-style.css" />
 </head>
 <body>
 	<div id="wrapper">
@@ -33,11 +35,11 @@
 					<th>Action</th>
 				<tr>
 					<c:forEach items="${allCustomer}" var="customer">
-					
+
 						<c:url var="updateLink" value="/customer/showFormForUpdate">
 							<c:param name="customerId" value="${customer.id}" />
 						</c:url>
-						
+
 						<c:url var="deleteLink" value="/customer/showFormForDelete">
 							<c:param name="customerId" value="${customer.id}" />
 						</c:url>
@@ -45,7 +47,9 @@
 							<td>${customer.firstName}</td>
 							<td>${customer.lastName}</td>
 							<td>${customer.email}</td>
-							<td><a href="${updateLink}">Update</a> | <a href="${deleteLink}">Delete</a></td>
+							<td><a href="${updateLink}">Update</a> 
+														 | 
+								<a href="${deleteLink}" onclick="if(!(confirm('Are You Sure u want to delete the customer '))) return false;">Delete</a></td>
 						</tr>
 
 					</c:forEach>
