@@ -20,4 +20,9 @@ public class CustomerServiceImple implements ICustomerService {
 		return (List<Customer>) dao.findAll();
 	}
 
+	@Override
+	public void saveCustomer(Customer customer) {
+		dao.save(customer);
+	}
+
 }
