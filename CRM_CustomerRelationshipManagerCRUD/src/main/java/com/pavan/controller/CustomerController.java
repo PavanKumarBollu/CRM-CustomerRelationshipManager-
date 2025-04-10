@@ -10,14 +10,22 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.pavan.model.Customer;
+import com.pavan.service.CustomerServiceImple;
 import com.pavan.service.ICustomerService;
 
 @Controller
 @RequestMapping("/customer")
 public class CustomerController {
+
+    private final CustomerServiceImple customerServiceImple;
 	
 	@Autowired
 	private ICustomerService service;
+
+
+    CustomerController(CustomerServiceImple customerServiceImple) {
+        this.customerServiceImple = customerServiceImple;
+    }
 	
 	
 	
@@ -34,6 +42,7 @@ public class CustomerController {
 	@GetMapping(value = "/showForm")
 	public String showFormAdd(Map<String, Object> model)
 	{
+		System.out.println("inside Show form");
 		model.put("customer", new Customer());
 		return "customer-form";
 	}

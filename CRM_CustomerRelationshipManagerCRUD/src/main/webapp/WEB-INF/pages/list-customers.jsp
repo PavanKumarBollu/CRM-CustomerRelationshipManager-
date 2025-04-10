@@ -20,7 +20,7 @@
 	<div id="container" >
 		<div id="content">
 		<!-- Button to Add New Customer -->
-		<input type="button" value="AddNewCustomer" class="add-button" onclick="window.location.href=showForm; return false;" />
+		<input type="button" value="AddNewCustomer" class="add-button" onclick="window.location.href='${pageContext.request.contextPath}/test' "; return false;" />
 		
 		
 			<table>
