@@ -12,17 +12,13 @@ import com.pavan.model.Customer;
 import com.pavan.service.ICustomerService;
 
 @Controller
-//@RequestMapping("/customer")
+@RequestMapping("/customer")
 public class CustomerController {
 	
 	@Autowired
 	private ICustomerService service;
 	
-	@GetMapping
-	public String dislayIndex()
-	{
-		return "index";
-	}
+	
 	
 	@GetMapping(value="/list")
 	public String listCustomers(Map<String,Object> model)
