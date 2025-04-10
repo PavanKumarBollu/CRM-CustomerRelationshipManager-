@@ -26,7 +26,7 @@
 					<th>Email</th>
 					<th>Action</th>
 				<tr>
-				<c:forEach items="${customers }" var="customer">
+				<c:forEach items="${allCustomer}" var="customer" >
 					<tr>
 						<td>${customer.firstName}</td>
 						<td>${customer.lastName}</td>
