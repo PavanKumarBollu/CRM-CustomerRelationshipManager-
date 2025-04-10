@@ -8,8 +8,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/css/style.css" />
+<link rel="stylesheet" type="text/css"	href="${pageContext.request.contextPath}/css/style.css" />
+<link rel="stylesheet" type="text/css"	href="${pageContext.request.contextPath}/css/add-customer-style.css" />
 </head>
 <body>
 	<div id="wrapper">
@@ -33,6 +33,7 @@
 					<th>Action</th>
 				<tr>
 					<c:forEach items="${allCustomer}" var="customer">
+					
 						<c:url var="updateLink" value="/customer/showFormForUpdate">
 							<c:param name="customerId" value="${customer.id}" />
 						</c:url>
