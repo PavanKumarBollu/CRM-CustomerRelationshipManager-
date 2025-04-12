@@ -69,6 +69,10 @@ public class CustomerController {
 		service.deleteCustomerById(customerId);
 		return "redirect:/customer/list";
 	}
+
+
+
+
 	
 	
 }
